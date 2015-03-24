@@ -185,15 +185,16 @@ namespace Kings
         private void next_card_Click(object sender, EventArgs e)
         {
             prev_card.Enabled = true;
-            if (card_pos <= game_deck.Count-1)
+            card_pos++;
+            if (card_pos <= game_deck.Count - 1)
             {
-                card_pos++;
+
                 label1.Text = game_deck[card_pos].get_value() + " of " + game_deck[card_pos].get_suit();
                 curr_card.Image = game_deck[card_pos].get_image();
 
                 curr_pos.Text = card_pos.ToString();
             }
-            else 
+            else
             {
                 curr_card.Image = Image.FromFile("C:\\Users\\David.Owen\\Documents\\Visual Studio 2012\\Projects\\Kings\\Kings\\cards\\game_over.png");
                 label1.Text = "Game Over!";
