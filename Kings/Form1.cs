@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//========================================================================================================================
+//
+//      WOULDN'T IT BE AWESOME IF THE USER COULD CHOOSE WHAT RULES BEFORE THE GAME?!   
+//  
+//========================================================================================================================  
 
 namespace Kings
 {    
@@ -174,9 +179,53 @@ namespace Kings
 //========================================================================================================================
 //  Get drink rules
 //======================================================================================================================== 
-        public void get_rules(Card curr)
+        public void get_rules(Card my_card)
         {
-
+            switch (my_card.get_value())
+            {
+                case "Ace":
+                    Rule_Box.Text = "YOU DONE GOT AN ACE BRUH";
+                    break;
+                case "King":
+                    Rule_Box.Text = "YOU DONE GOT AN KING BRUH";
+                    break;
+                case "Queen":
+                    Rule_Box.Text = "YOU DONE GOT AN QUEEN BRUH";
+                    break;
+                case "Jack":
+                    Rule_Box.Text = "YOU DONE GOT AN JACK BRUH";
+                    break;
+                case "Ten":
+                    Rule_Box.Text = "YOU DONE GOT AN TEN BRUH";
+                    break;
+                case "Nine":
+                    Rule_Box.Text = "YOU DONE GOT AN NINE BRUH";
+                    break;
+                case "Eight":
+                    Rule_Box.Text = "YOU DONE GOT AN EIGHT BRUH";
+                    break;
+                case "Seven":
+                    Rule_Box.Text = "YOU DONE GOT AN SEVEN BRUH";
+                    break;
+                case "Six":
+                    Rule_Box.Text = "YOU DONE GOT AN SIX BRUH";
+                    break;
+                case "Five":
+                    Rule_Box.Text = "YOU DONE GOT AN FIVE BRUH";
+                    break;
+                case "Four":
+                    Rule_Box.Text = "YOU DONE GOT AN FOUR BRUH";
+                    break;
+                case "Three":
+                    Rule_Box.Text = "YOU DONE GOT AN THREE BRUH";
+                    break;
+                case "Two":
+                    Rule_Box.Text = "YOU DONE GOT AN TWO BRUH";
+                    break;
+                case "Joker":
+                    Rule_Box.Text = "YOU DONE GOT AN JOKER BRUH";
+                    break;
+            }
         }
 
 //========================================================================================================================
@@ -190,9 +239,9 @@ namespace Kings
             {
 
                 label1.Text = game_deck[card_pos].get_value() + " of " + game_deck[card_pos].get_suit();
-                curr_card.Image = game_deck[card_pos].get_image();
-
+                curr_card.Image = game_deck[card_pos].get_image();  
                 curr_pos.Text = card_pos.ToString();
+                get_rules(game_deck[card_pos]);
             }
             else
             {

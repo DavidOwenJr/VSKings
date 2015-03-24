@@ -37,6 +37,7 @@
             this.prev_card = new System.Windows.Forms.Button();
             this.curr_pos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Rule_Box = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.curr_card)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,11 +101,22 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "LET\'S GET BOMBED!";
             // 
+            // Rule_Box
+            // 
+            this.Rule_Box.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rule_Box.Location = new System.Drawing.Point(269, 12);
+            this.Rule_Box.Name = "Rule_Box";
+            this.Rule_Box.ReadOnly = true;
+            this.Rule_Box.Size = new System.Drawing.Size(287, 292);
+            this.Rule_Box.TabIndex = 12;
+            this.Rule_Box.Text = "";
+            // 
             // Kings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 319);
+            this.ClientSize = new System.Drawing.Size(568, 319);
+            this.Controls.Add(this.Rule_Box);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.curr_pos);
             this.Controls.Add(this.prev_card);
@@ -129,6 +141,7 @@
         private System.Windows.Forms.Button prev_card;
         private System.Windows.Forms.Label curr_pos;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.RichTextBox Rule_Box;
     }
 }
 
