@@ -103,6 +103,7 @@
             // 
             // Rule_Box
             // 
+            this.Rule_Box.Cursor = System.Windows.Forms.Cursors.Default;
             this.Rule_Box.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rule_Box.Location = new System.Drawing.Point(269, 12);
             this.Rule_Box.Name = "Rule_Box";
@@ -124,7 +125,9 @@
             this.Controls.Add(this.curr_card);
             this.Controls.Add(this.shuffle_deck);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Kings";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Drink Like Kings!";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.curr_card)).EndInit();
